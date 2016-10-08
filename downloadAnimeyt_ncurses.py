@@ -8,7 +8,7 @@ import sys, os
 import urllib, urllib2, cookielib
 
 # Librerías útiles
-import re, curses, traceback, threading, time
+import re, curses, traceback, threading
 
 class CursedMenu(object):
 	'''A class which abstracts the horrors of building a curses-based menu system'''
@@ -265,8 +265,7 @@ def getUrlDownloadChapter(url):
 def downloadVideo(url, directorio):
 	try:
 		# si el archivo no existe, lo descargamos
-		print "Descargando {0} en {1}".format(url, directorio)
-		time.sleep(5)
+		#print "Descargando {0} en {1}".format(url, directorio)
 		if not os.path.isfile(directorio):
 			urllib.urlretrieve(url, directorio)
 	except:
